@@ -4,11 +4,14 @@
     background-color: rgb(200, 0, 0); /* css property - what we are changing, css value - what property changed to */
     color: white;
     border: none;
-    height: 36px;
-    width: 105px;
+    padding-top: 10px; /* padding - adds space inside of the element */
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 2px;
     cursor: pointer;
     transition: opacity 0.15s;
+    vertical-align: top; /*aligns buttons at top of page and not aligning by text*/
     margin-right: 8px /*margin - space around an element*/
   }
 
@@ -25,10 +28,13 @@
     border-color: rgb(36, 129, 251);
     color: rgb(36, 129, 251);
     border-style: solid;
-    border-width: 1px;
-    height: 36px;
-    width: 62px;
+    border-width: 1px; /*border adds 1px on the top and bottom so padding top and bottom needs to be one less*/
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 2px;
+    vertical-align: top;
     cursor: pointer;
     transition: background-color 0.15s, color 0.15s;
   }
@@ -46,14 +52,17 @@
     background-color: rgb(33, 144, 242);
     border: none;
     color: white;
-    height: 36px;
-    width: 74px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 18px; /*set border-radius to half of height or width, whichever is lower*/
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
     margin-left: 8px;
     transition: box-shadow 0.15s;
+    vertical-align: top;
   }
 
   .tweet-button:hover {
@@ -68,6 +77,7 @@
     width: 115px;
     font-weight: bold;
     margin-left: 8px;
+    vertical-align: top;
     transition: opacity, 0.15s;
     cursor: pointer
   }
@@ -83,12 +93,27 @@
     width: 140px;
     border-radius: 13px;
     margin-left: 8px;
+    vertical-align: top;
     cursor: pointer;
   }
 
   .amazon-button:hover {
     background-color: rgb(232, 197, 20);
     transition: opacity, 0.15s;
+  }
+
+  .stretch-button {
+    background-color: green;
+    color: white;
+    margin-left: 8px;
+    border: none;
+    vertical-align: top;
+    cursor: pointer;
+    transition: padding, 0.15s;
+  }
+
+  .stretch-button:hover {
+    padding: 10px 25px 10px 25px;
   }
 
   a {
@@ -167,6 +192,10 @@
 
 <button class="amazon-button">
   Add to Cart
+</button>
+
+<button class="stretch-button">
+  Stretch
 </button>
 
 <a href="https://www.amazon.com/" target="_blank">
